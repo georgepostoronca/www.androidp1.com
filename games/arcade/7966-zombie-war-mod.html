@@ -412,13 +412,13 @@
                         </svg>
 
                         <!--Comments-->
-                        <div class="block-comments">
+                        <footer class="block-comments">
                             <!--Head-->
                             <div class="block-comments__head">
                                 <!--Number-->
                                 <div class="block-comments__number">
                                     <img src="./source/chat.svg" alt="chat icon">
-                                    <span>Комментарии:</span>
+                                    <h3>Комментарии:</h3>
                                 </div>
 
                                 <!--Add-->
@@ -443,15 +443,15 @@
                             </form>
 
                             <!--Grid-->
-                            <div class="block-comments__grid">
+                            <section class="block-comments__grid">
 
                                 <!--Grid Items-->
-                                <div class="commentitem js-commentitem">
+                                <article class="commentitem js-commentitem">
                                     <picture class="commentitem__avatar">
                                         <img src="source/av1.png" alt="avatar">
                                     </picture>
 
-                                    <div class="commentitem__head">
+                                    <footer class="commentitem__head">
                                         <div class="commentitem__name">
                                             <span>Nik_name_01</span>
                                             <em>15 ноября 2020</em>
@@ -474,7 +474,7 @@
 
                                             <em>Комментарий к версии: 2.0.0</em>
                                         </div>
-                                    </div>
+                                    </footer>
 
                                     <div class="commentitem__text">
                                         <p>
@@ -502,12 +502,12 @@
                                     <div class="commentitem__subcomment js-commentitem-subcomment">
 
                                         <!--Subcomment-->
-                                        <div class="commentitem js-commentitem">
+                                        <article class="commentitem js-commentitem">
                                             <picture class="commentitem__avatar">
                                                 <img src="source/av2.png" alt="avatar">
                                             </picture>
 
-                                            <div class="commentitem__head">
+                                            <footer class="commentitem__head">
                                                 <div class="commentitem__name">
                                                     <span>Jlkjkj23</span>
                                                     <em>15 ноября 2020</em>
@@ -527,24 +527,24 @@
                                                         <span>12</span>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </footer>
 
                                             <div class="commentitem__text">
                                                 <p>
                                                     Обнова просто класс. Но что-то пошло не так.
                                                 </p>
                                             </div>
-                                        </div>
+                                        </article>
 
                                     </div>
-                                </div>
+                                </article>
 
-                                <div class="commentitem js-commentitem">
+                                <article class="commentitem js-commentitem">
                                     <picture class="commentitem__avatar">
                                         <img src="source/av1.png" alt="avatar">
                                     </picture>
 
-                                    <div class="commentitem__head">
+                                    <footer class="commentitem__head">
                                         <div class="commentitem__name">
                                             <span>Nik_name_01</span>
                                             <em>15 ноября 2020</em>
@@ -566,7 +566,7 @@
 
                                             <em>Комментарий к версии: 2.0.0</em>
                                         </div>
-                                    </div>
+                                    </footer>
 
                                     <div class="commentitem__text">
                                         <p>
@@ -578,8 +578,9 @@
                                     <div class="commentitem__ctrl">
                                         <button class="reply">Ответить</button>
                                     </div>
-                                </div>
-                            </div>
+                                </article>
+                            </section>
+
 
                             <!--More-->
                             <div class="block-comments__more">
@@ -590,12 +591,12 @@
                                     </svg>
                                 </button>
                             </div>
-                        </div>
+                        </footer>
 
                         <script>
                           let openCommentFormBtn = document.querySelector(".js-btn-add-comment");
                           let openCommentForm = document.querySelector(".js-form-add-comment");
-                          console.log(openCommentFormBtn, openCommentForm)
+
                           openCommentFormBtn.addEventListener("click", function(e) {
                             openCommentFormBtn.classList.add("hidden")
                             openCommentForm.classList.add("active");
@@ -607,16 +608,11 @@
                             let subbcoment = document.querySelector(".js-commentitem-subcomment");
                             let text = document.querySelector(".js-commentitem-show-text");
 
-                            let hide = "Скрыть";
-                            let show = "Показать";
+                            let name = ["Скрыть", "Показать"]
                             let flag = false;
 
                             showbtn.addEventListener("click", function() {
-                              if(flag) {
-                                text.innerText = show;
-                              } else {
-                                text.innerText = hide;
-                              }
+                              text.innerText = name[Number(flag)];
 
                               showbtn.classList.toggle("active");
                               subbcoment.classList.toggle("active");
