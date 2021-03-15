@@ -432,8 +432,8 @@
 
                             <!--Form-->
                             <form class="block-comments__form-add js-form-add-comment">
-                                <input type="text" placeholder="Имя">
-                                <textarea name="textarea" id="textarea" placeholder="Комментарий"></textarea>
+                                <input type="text" placeholder="Имя" required>
+                                <textarea name="textarea" id="textarea" placeholder="Комментарий" required></textarea>
                                 <button>
                                     <span>Добавить комментарий</span>
                                     <svg class="icon">
@@ -446,15 +446,15 @@
                             <section class="block-comments__grid">
 
                                 <!--Grid Items-->
-                                <article class="commentitem js-commentitem">
+                                <article class="commentitem js-commentitem" itemprop="comment" itemscope itemtype="https://schema.org/Comment">
                                     <picture class="commentitem__avatar">
                                         <img src="source/av1.png" alt="avatar">
                                     </picture>
 
                                     <footer class="commentitem__head">
                                         <div class="commentitem__name">
-                                            <span>Nik_name_01</span>
-                                            <em>15 ноября 2020</em>
+                                            <span itemprop="author" itemscope itemtype="https://schema.org/Person">Nik_name_01</span>
+                                            <em itemprop="dateCreated">15 ноября 2020</em>
                                             <em class="mobile">Комментарий к версии: 2.0.0</em>
                                         </div>
 
@@ -473,11 +473,14 @@
                                             </div>
 
                                             <em>Комментарий к версии: 2.0.0</em>
+
+                                            <meta itemprop="upvoteCount" content="1525">
+                                            <meta itemprop="downvoteCount" content="12">
                                         </div>
                                     </footer>
 
                                     <div class="commentitem__text">
-                                        <p>
+                                        <p itemprop="text">
                                             5 звёзд, но с натяжкой Играю на ластовом 865 снапе. Паблики идут на 60фпс
                                             стабильно на всех настройках, но на т2 праках, где на ластовых зонах по 40+
                                             человек, бывают микрофризы. В клоузе это не очень приятно встретить. А так,
@@ -509,8 +512,8 @@
 
                                             <footer class="commentitem__head">
                                                 <div class="commentitem__name">
-                                                    <span>Jlkjkj23</span>
-                                                    <em>15 ноября 2020</em>
+                                                    <span itemprop="author" itemscope itemtype="https://schema.org/Person">Jlkjkj23</span>
+                                                    <em itemprop="dateCreated">15 ноября 2020</em>
                                                 </div>
 
                                                 <div class="commentitem__likeunlike">
@@ -526,11 +529,14 @@
                                                         </svg>
                                                         <span>12</span>
                                                     </div>
+
+                                                    <meta itemprop="upvoteCount" content="1525">
+                                                    <meta itemprop="downvoteCount" content="12">
                                                 </div>
                                             </footer>
 
                                             <div class="commentitem__text">
-                                                <p>
+                                                <p itemprop="text">
                                                     Обнова просто класс. Но что-то пошло не так.
                                                 </p>
                                             </div>
@@ -539,15 +545,15 @@
                                     </div>
                                 </article>
 
-                                <article class="commentitem js-commentitem">
+                                <article class="commentitem js-commentitem" itemprop="comment" itemscope itemtype="https://schema.org/Comment">
                                     <picture class="commentitem__avatar">
                                         <img src="source/av1.png" alt="avatar">
                                     </picture>
 
                                     <footer class="commentitem__head">
                                         <div class="commentitem__name">
-                                            <span>Nik_name_01</span>
-                                            <em>15 ноября 2020</em>
+                                            <span itemprop="author" itemscope itemtype="https://schema.org/Person">Nik_name_01</span>
+                                            <em itemprop="dateCreated">15 ноября 2020</em>
                                         </div>
 
                                         <div class="commentitem__likeunlike">
@@ -565,11 +571,14 @@
                                             </div>
 
                                             <em>Комментарий к версии: 2.0.0</em>
+
+                                            <meta itemprop="upvoteCount" content="1525">
+                                            <meta itemprop="downvoteCount" content="12">
                                         </div>
                                     </footer>
 
                                     <div class="commentitem__text">
-                                        <p>
+                                        <p itemprop="text">
                                             Игра самая лучшая, но читеров очень много, а методы борьбы почему то не
                                             очень эффективные.
                                         </p>

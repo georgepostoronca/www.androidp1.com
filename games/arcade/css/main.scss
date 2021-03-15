@@ -143,6 +143,10 @@
       &::placeholder {
         color: #969FBC;
       }
+
+      &:focus:invalid {
+        box-shadow: 0 0 0px 1px red;
+      }
     }
 
     input {
@@ -150,6 +154,9 @@
       background: #FFFFFF;
       border-radius: 25px;
       margin-bottom: 30px;
+      box-shadow: 0 0 0 1px #fff;
+      transition: .2s;
+      outline: none;
     }
 
     textarea {
@@ -158,12 +165,13 @@
       height: 160px;
       background: #FFFFFF;
       border-radius: 25px;
+      transition: .2s;
 
       max-width: 100%;
       min-width: 100%;
-      outline: none;
-
+      box-shadow: 0 0 0 1px #fff;
       margin-bottom: 30px;
+      outline: none;
     }
 
     button {
