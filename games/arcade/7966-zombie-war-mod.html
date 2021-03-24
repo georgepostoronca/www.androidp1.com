@@ -711,10 +711,10 @@
                           });
 
                           let commentitem = [].slice.call(document.querySelectorAll(".js-commentitem"));
-                          commentitem.forEach(function() {
-                            let showbtn = document.querySelector(".js-commentitem-show");
-                            let subbcoment = document.querySelector(".js-commentitem-subcomment");
-                            let text = document.querySelector(".js-commentitem-show-text");
+                          commentitem.forEach(function(item) {
+                            let showbtn = item.querySelector(".js-commentitem-show");
+                            let subbcoment = item.querySelector(".js-commentitem-subcomment");
+                            let text = item.querySelector(".js-commentitem-show-text");
 
                             let name = ["Скрыть", "Показать"]
                             let flag = false;
